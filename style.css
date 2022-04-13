@@ -1,0 +1,105 @@
+:root {
+  --white-color: #ededed;
+  --white-rgb: 237, 237, 237;
+  --main-color: #a2b38b;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+}
+
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  height: 100%;
+  display: flex;
+  position: relative;
+  transition: all 1s ease;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slide {
+  transition: 1s;
+}
+
+.slide img {
+  width: 800px;
+  height: 500px;
+}
+
+.navigation-manual {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  background-color: rgba(var(--white-rgb), 0.3);
+  width: 30px;
+  height: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 3px;
+}
+
+.manual-btn ~ .manual-btn {
+  margin-left: 15px;
+}
+
+.manual-btn:hover {
+  background-color: var(--white-color);
+}
+
+.manual-btn.active {
+  background-color: var(--white-color);
+}
+
+.control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(var(--white-rgb), 0.5);
+}
+
+.control i {
+  font-size: 2rem;
+  color: var(--white-color);
+  opacity: 1;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.previous-btn {
+  left: 20px;
+}
